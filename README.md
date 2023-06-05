@@ -27,7 +27,7 @@ git clone https://github.com/rgiannotti/svelte-troc.git
 2. Navega hasta el directorio del proyecto.
 
 ```bash
-cd todo-list-svelte
+cd svelte-troc
 ```
 
 3. Instala las dependencias del proyecto utilizando npm.

@@ -6,6 +6,7 @@
 
     let items: any[] = [];
     let itemName = "";
+    let itemUpdating = false;
 
     const handleAddItem = (event: any) => {
         let item = {
@@ -21,6 +22,7 @@
         }
         items = items;
         itemName = "";
+        itemUpdating = false;
     };
 
     const handleDeleteItem = (event: any) => {
@@ -32,7 +34,9 @@
     const handleUpdateItem = (event: any) => {
         const { item, index } = event.detail;
         itemName = item.name;
-        items[index].updating = !item.updating;
+        items.map(item => item.updating = false);
+        items[index].updating = true;
+        itemUpdating = true;
     };
 </script>
 
@@ -40,7 +44,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
-                <Input bind:itemName={itemName} on:add-evt={handleAddItem} />
+                <Input bind:itemName={itemName} itemUpdating={itemUpdating} on:add-evt={handleAddItem} />
             </div>
 
             <div class="col-lg-6 offset-lg-3">

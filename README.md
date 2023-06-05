@@ -1,38 +1,43 @@
-# create-svelte
+# To-Do List - Troc
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Este es un proyecto de una lista de tareas desarrollado en Svelte para la empresa Troc. Proporciona una interfaz de usuario intuitiva y fácil de usar para gestionar tareas y mantener un registro de las actividades pendientes.
 
-## Creating a project
+## Características principales
 
-If you're seeing this, you've probably already done this step. Congrats!
+* Crear, leer, actualizar y eliminar tareas.
+* Marcar las tareas como completadas.
+
+## Requisitos previos
+
+Antes de ejecutar el proyecto, asegúrate de tener los siguientes requisitos previos instalados en tu entorno de desarrollo:
+
+* Node.js (versión 16.14 o superior)
+* npm (administrador de paquetes de Node.js).
+
+## Configuración del proyecto
+
+Sigue los pasos a continuación para configurar y ejecutar el proyecto en tu máquina local:
+
+1. Clona este repositorio en tu máquina local o descarga el código fuente como archivo ZIP.
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/troc/todo-list-svelte.git
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+2. Navega hasta el directorio del proyecto.
 
 ```bash
-npm run dev
+cd todo-list-svelte
+```
 
-# or start the server and open the app in a new browser tab
+3. Instala las dependencias del proyecto utilizando npm.
+
+```bash
+npm install
+```
+
+4. Inicia la aplicación en modo de desarrollo.
+
+```bash
 npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

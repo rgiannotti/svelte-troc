@@ -2,6 +2,7 @@
     import { createEventDispatcher } from 'svelte';
 
     export let itemName: string;
+    export let itemUpdating: boolean;
 
     const dispatch = createEventDispatcher();
     function addFn () {
@@ -15,9 +16,10 @@
         type="text"
         class=""
         bind:value={itemName}
+        on:keydown={e => { if (e.key === 'Enter') { addFn(); } } }
         placeholder="Ingresa una tarea..."
     />
-    <button on:click={() => addFn()}>Agregar</button>
+    <button on:click={() => addFn()}>{ itemUpdating ? 'Salvar' : 'Agregar' }</button>
 </div>
 
 <style>

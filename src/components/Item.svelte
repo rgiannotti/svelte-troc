@@ -15,9 +15,12 @@
     };
 </script>
 
-<article class={index%2 == 0 ? 'row-1' : 'row-2'}>
+<article class={index%2 == 0 ? 'row-1' : 'row-2'} >
     <div style="margin-right: 10px;"><input type="checkbox" bind:checked={item.completed}></div>
-    <div class={item.completed ? 'item-name completed' : 'item-name'}>{item.name}</div>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class={item.completed ? 'item-name completed' : 'item-name'} on:click={() => item.completed = !item.completed}>
+        {item.name}
+    </div>
     <div class="item-buttons">
         <button on:click={() => updateFn()} disabled={item.updating}><EditIcon /></button>
         <button on:click={() => deleteFn()} class="danger"><DeleteIcon /></button>
@@ -41,6 +44,7 @@
         flex: 1;
         justify-self: start;
         align-items: center;
+        cursor: pointer;
     }
     .item-buttons {
         display: flex;

@@ -21,7 +21,7 @@ Sigue los pasos a continuación para configurar y ejecutar el proyecto en tu má
 1. Clona este repositorio en tu máquina local o descarga el código fuente como archivo ZIP.
 
 ```bash
-git clone https://github.com/troc/todo-list-svelte.git
+git clone https://github.com/rgiannotti/svelte-troc.git
 ```
 
 2. Navega hasta el directorio del proyecto.
